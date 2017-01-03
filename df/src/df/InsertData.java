@@ -25,7 +25,12 @@ public class InsertData {
      psmt.setInt(1,studentid);
      psmt.setString(2,studentname);
      psmt.setString(3,course);
-	}
+     int row_eff=psmt.executeUpdate();
+    
+	System.out.println(row_eff+ "row effected");
+	psmt.close();
+	conn.close();
+		}
 	catch(Exception e)
 	{
 		System.out.println("Exception Arised"+e);
